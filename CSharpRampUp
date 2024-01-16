@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        double kg;
+        double km;
+        double temp;
+        var students = new int[10];
+        double average = 0;
+        Console.WriteLine ("Enter your weight(lbs)");
+        double weight = Convert.ToDouble(Console.ReadLine());
+        kg = weight/ 2.205;
+        Console.WriteLine("Enter The distance(miles)");
+        double miles = Convert.ToDouble(Console.ReadLine());
+        km = miles *  1.609;
+        Console.WriteLine("Enter the temperature(Fahrenheit)");
+        double fah = Convert.ToDouble(Console.ReadLine());
+        temp = (fah - 32) * 0.555;
+        Console.WriteLine("Enter the age of 10 students");
+        for (int i = 0; i<10; i++)
+         {
+            int input = Convert.ToInt32(Console.ReadLine());
+            students[i] = input;        
+         }
+       foreach (int a in students)
+        {
+            average = average + a;
+        }
+        average = average/10;
+        Console.WriteLine($"Weight in kg: {kg} kg");
+Console.WriteLine($"Distance in km: {km} km");
+Console.WriteLine($"Temperature in Celsius: {temp}");
+
+Console.WriteLine("Ages of 10 students:");
+foreach (int a in students)
+{
+    Console.WriteLine(a);
+}
+
+Console.WriteLine($"Average age of students: {average}");
+//part2
+        //Pyramid
+        int n;
+        n = Int32.Parse(Console.ReadLine());
+        for (int ii = 0; ii <= n; ii++){
+            for (int xx = 0; xx <= ii; xx++){
+                Console.Write(xx);
+                
+            }
+            Console.Write("\n");
+        }
+        //Input Add Sequence
+        int add;
+        int output = 0;
+        add = Int32.Parse(Console.ReadLine());
+        for (int ax = 0; ax<=add;ax++){
+            Console.Write(ax);
+            output += ax;
+            if (ax != add){
+                Console.Write("+");
+            }
+        }
+        if (output <= 0){
+            Console.WriteLine("Invalid Input");
+        }
+        else {
+            Console.Write("\n");
+            Console.Write("Output:");
+            Console.Write(output);
+        }
+        Console.Write("\n");
+        //Reverse Pyramid
+        int pyra;
+        pyra = Int32.Parse(Console.ReadLine());
+        for (int c = pyra; c >= 0; c--){
+            for (int h = 0; h <= c; h++){
+                Console.Write(h);
+                
+            }
+            Console.Write("\n");
+        }
+    }
+}
