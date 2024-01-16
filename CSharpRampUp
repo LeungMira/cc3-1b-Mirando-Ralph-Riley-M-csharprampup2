@@ -9,77 +9,111 @@ public class HelloWorld
         double temp;
         var students = new int[10];
         double average = 0;
-        Console.WriteLine ("Enter your weight(lbs)");
+        Console.WriteLine("Enter your weight(lbs)");
         double weight = Convert.ToDouble(Console.ReadLine());
-        kg = weight/ 2.205;
+        kg = weight / 2.205;
         Console.WriteLine("Enter The distance(miles)");
         double miles = Convert.ToDouble(Console.ReadLine());
-        km = miles *  1.609;
+        km = miles * 1.609;
         Console.WriteLine("Enter the temperature(Fahrenheit)");
         double fah = Convert.ToDouble(Console.ReadLine());
         temp = (fah - 32) * 0.555;
         Console.WriteLine("Enter the age of 10 students");
-        for (int i = 0; i<10; i++)
-         {
+        for (int i = 0; i < 10; i++)
+        {
             int input = Convert.ToInt32(Console.ReadLine());
-            students[i] = input;        
-         }
-       foreach (int a in students)
+            students[i] = input;
+        }
+        foreach (int a in students)
         {
             average = average + a;
         }
-        average = average/10;
+        average = average / 10;
         Console.WriteLine($"Weight in kg: {kg} kg");
-Console.WriteLine($"Distance in km: {km} km");
-Console.WriteLine($"Temperature in Celsius: {temp}");
+        Console.WriteLine($"Distance in km: {km} km");
+        Console.WriteLine($"Temperature in Celsius: {temp}");
 
-Console.WriteLine("Ages of 10 students:");
-foreach (int a in students)
-{
-    Console.WriteLine(a);
-}
+        Console.WriteLine("Ages of 10 students:");
+        foreach (int a in students)
+        {
+            Console.WriteLine(a);
+        }
 
-Console.WriteLine($"Average age of students: {average}");
-//part2
+        Console.WriteLine($"Average age of students: {average}");
+        //part2
         //Pyramid
         int n;
+        Console.WriteLine("Enter a number");
         n = Int32.Parse(Console.ReadLine());
-        for (int ii = 0; ii <= n; ii++){
-            for (int xx = 0; xx <= ii; xx++){
+        for (int ii = 0; ii <= n; ii++)
+        {
+            for (int xx = 0; xx <= ii; xx++)
+            {
                 Console.Write(xx);
-                
+
             }
             Console.Write("\n");
         }
         //Input Add Sequence
+        Console.WriteLine("Enter a number");
         int add;
         int output = 0;
         add = Int32.Parse(Console.ReadLine());
-        for (int ax = 0; ax<=add;ax++){
+        for (int ax = 0; ax <= add; ax++)
+        {
             Console.Write(ax);
             output += ax;
-            if (ax != add){
+            if (ax != add)
+            {
                 Console.Write("+");
             }
         }
-        if (output <= 0){
+        if (output <= 0 || output == null)
+        {
             Console.WriteLine("Invalid Input");
         }
-        else {
+        else
+        {
             Console.Write("\n");
             Console.Write("Output:");
             Console.Write(output);
         }
         Console.Write("\n");
         //Reverse Pyramid
+        Console.WriteLine("Enter a number");
         int pyra;
         pyra = Int32.Parse(Console.ReadLine());
-        for (int c = pyra; c >= 0; c--){
-            for (int h = 0; h <= c; h++){
+        for (int c = pyra; c >= 0; c--)
+        {
+            for (int h = 0; h <= c; h++)
+            {
                 Console.Write(h);
-                
+
             }
             Console.Write("\n");
         }
+    }
+    public static void Story()
+    {
+        string[] names = new string[5];
+        string[] ability = new string[5];
+        string[] equipment = new string[5];
+        for (int name = 0; name < names.Length; name++)
+        {
+            Console.WriteLine("Enter the names of 5 persons.");
+            names[name] = Console.ReadLine();
+        }
+        for (int ab = 0; ab < ability.Length; ab++)
+        {
+            Console.WriteLine("Enter the names of 5 Abilities.");
+            ability[ab] = Console.ReadLine();
+        }
+        for (int equ = 0; equ < equipment.Length; equ++)
+        {
+            Console.WriteLine("Enter the names of 5 Equipments");
+            equipment[equ] = Console.ReadLine();
+        }
+        Console.WriteLine($"Long ago, There was a wonderfully caring prince.His name was Prince {names[0]}, His trusted advisor, \n Sir {names[1]} was a cunning and tactical individual who helped the prince sustain his kingdom. \n But the prince's compatriot, {names[2]}, Wanted to solely help the prince \n leaving the king with few less followers as the compatriot was also a noble of a vast enterprise. ");
+        Console.WriteLine($"Soon however, It was revealed that {names[3]} was an enemy of the king, Using his {ability[0]} and {ability[1]} to thwart the king and take his throne for himself due to the lack \n of supporting nobles to his side. \n Alas, The prince had other plans. Utilizing his friends and connections,\n He sought out for the wise one, {names[4]}'s help in returning his kingdom \n from to glory. Using the wise one's {ability[2]} and {ability[3]} he forged the ultimate gear for the prince. Finalizing it with a dwarf's magical {ability[4]}. \n the thundering might of his {equipment[0]} with his {equipment[1]} and equiped furthermore with the righteous {equipment[2]} and {equipment[3]}. the prince was far more than ready to fight the tyrant.  \n Alas, Thetyrant had {equipment[4]}. So it is left to fate who would win.");
     }
 }
