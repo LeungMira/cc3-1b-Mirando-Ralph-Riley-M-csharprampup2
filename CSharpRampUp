@@ -40,6 +40,8 @@ public class HelloWorld
         }
 
         Console.WriteLine($"Average age of students: {average}");
+        Story();
+
         //part2
         //Pyramid
         int n;
